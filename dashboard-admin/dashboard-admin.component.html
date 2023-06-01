@@ -1,0 +1,85 @@
+<footer id="contact">
+    <div class="footer">
+       <div class="container">
+          <div class="row">
+             <div class="col-md-4">
+                <div class="titlepage">
+                   <h2>DASHBOARD ADMIN</h2>
+                </div>
+             </div>
+             <div class="col-md-12">
+                <div id="request" class="main_form" >
+<div>
+    <nav class="nav nav-tabs" id="nav-tab" role="tablist">
+        <div>
+        <button class="nav-link active" id="nav-home-tab" data-toggle="tab" data-target="#nav-home" type="button" role="tab" aria-controls="nav-home" aria-selected="true">owners</button>
+        <button class="nav-link" id="nav-profile-tab" data-toggle="tab" data-target="#nav-profile" type="button" role="tab" aria-controls="nav-profile" aria-selected="false">specialties</button>
+        </div>
+    </nav>
+    <div class="tab-content" id="nav-tabContent">
+        <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+          <table class="table table-dark">
+            <tr>
+              <th>ID</th>
+              <th scope="col">First Name</th>
+              <th scope="col">Last Name</th>
+              <th scope="col">Email</th>
+              <th scope="col">Phone</th>
+              <th scope="col">Adress</th>
+              <th scope="col">specialties</th>
+              <th scope="col">experiences</th>
+              <th scope="col">Actions</th>
+            </tr>
+              <tr *ngFor ="let owner of owners">
+                 <th>{{owner._id}}</th>
+                 <th scope="col">{{owner.firstName}}</th>
+                 <th scope="col">{{owner.lastName}}</th>
+                 <th scope="col">{{owner.email}}</th>
+                 <th scope="col">{{owner.phone}}</th>
+                 <th scope="col">{{owner.adress}}</th>
+                 <th scope="col">{{owner.specialties}}</th>
+                 <th scope="col">{{owner.experiences}}</th>
+             <td>
+              <button type="button" class="btn btn-warning"(click)="displayOwner(owner._id)">Display</button>
+                 <button type="button" class="btn btn-warning"(click)="editOwner(owner._id)">Edit</button>
+                 <button type="button" class="btn btn-danger" (click)="deleteOwnerById(owner._id)" >Delete</button>
+             </td>
+            </tr>
+        </table>
+        </div> 
+        <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+          <table class="table table-dark">
+            <tr>
+              <th scope="col">id</th>
+              <th scope="col">Name</th>
+              <th scope="col">Price</th>
+              <th scope="col">Actions</th>
+            </tr>
+              <tr *ngFor ="let specialty of specialties">
+                  <td scope="col">{{specialty._id}}</td>
+                  <td scope="col">{{specialty.Name}}</td>
+                  <td scope="col">{{specialty.Price}}</td>
+              <td>
+                  <button type="button" class="btn btn-warning"(click)="displatySpecialty(specialty._id)">Display</button>
+              </td>
+            </tr>
+        </table>
+      </div>                   
+        </div>
+</div>
+                    <div class="row">
+                      <div class="col-sm-col-xl-6 col-lg-6 col-md-6 col-sm-12">
+                         <ul class="social_icon">
+                            <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                            <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                            <li><a href="#"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a></li>
+                            <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                         </ul>
+                      </div>
+                   </div>
+                 </div>
+               </div>
+             </div>
+           </div>
+         </div>
+ </footer>
