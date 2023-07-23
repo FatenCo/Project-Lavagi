@@ -1,0 +1,60 @@
+<footer id="contact">
+    <div class="footer">
+       <div class="container">
+          <div class="row">
+             <div class="col-md-4">
+                <div class="titlepage">
+                   <h2>add owner</h2>
+                </div>
+             </div>
+             <div class="col-md-12">
+                <form id="request" class="main_form" #ownerForm="ngForm" (ngSubmit)="addOrEditOwner()">
+                   <div class="row">
+                      <div class="col-md-12 ">
+                         <input class="contactus" placeholder="First Name" type="text" name="a" [(ngModel)]="owner.firstName" [ngModelOptions]="{standalone : true}"> 
+                      </div>
+                      <div class="col-md-12 ">
+                        <input class="contactus" placeholder="Last Name" type="text" name="b" [(ngModel)]="owner.lastName" [ngModelOptions]="{standalone : true}"> 
+                     </div>
+                     <div class="col-md-12 ">
+                        <input class="contactus" placeholder="Email" type="email" name="x" [(ngModel)]="owner.email" [ngModelOptions]="{standalone : true}"> 
+                     </div>
+                     <div class="col-md-12 ">
+                        <input class="contactus" placeholder="phone" type="tel" name="e" [(ngModel)]="owner.phone" [ngModelOptions]="{standalone : true}"> 
+                     </div>
+                     <div class="col-md-12 ">
+                        <input class="contactus" placeholder="adress" type="text" name="f" [(ngModel)]="owner.adress" [ngModelOptions]="{standalone : true}"> 
+                     </div>
+                     <div class="col-md-12 ">
+                        <input class="contactus" placeholder="specialties" type="text" name="g" [(ngModel)]="owner.specialties" [ngModelOptions]="{standalone : true}"> 
+                     </div>
+                     <div class="col-md-12 ">
+                        <input class="contactus" placeholder="experiences" type="number" name="x" [(ngModel)]="owner.experiences" [ngModelOptions]="{standalone : true}"> 
+                     </div>
+                     <div class="form-group " style="visibility: hidden;">
+                        <input class="contactus"  type="file" #filePicker [(ngModel)]="owner.img" (change)='onImageSelected($event)' [ngModelOptions]="{standalone : true}"> 
+                     </div>
+                     <div class="form-group text-center">
+                        <button type="button" class="btn btn-primary py-3 px-5" (click)="filePicker.click()">Please select lavage picture</button>
+                     </div>
+                     <div class="text-center">
+                        <img [src]="imagePreview" alt="" height="200px" width="200px">
+                     </div>
+                      <div class="col-sm-col-xl-6 col-lg-6 col-md-6 col-sm-12">
+                         <button type="submit" class="send_btn" [value]="title">add owner</button>
+                      </div>
+                      <div class="col-sm-col-xl-6 col-lg-6 col-md-6 col-sm-12">
+                         <ul class="social_icon">
+                            <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                            <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                            <li><a href="#"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a></li>
+                            <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                         </ul>
+                      </div>
+                   </div>
+                </form>
+             </div>
+          </div>
+       </div>
+    </div>
+ </footer>

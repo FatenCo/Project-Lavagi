@@ -1,0 +1,50 @@
+<footer id="contact">
+    <div class="footer">
+       <div class="container">
+          <div class="row">
+             <div class="col-md-4">
+                <div class="titlepage">
+                   <h2>Reservation</h2>
+                </div>
+             </div>
+             <div class="col-md-12">
+                <form id="request" class="main_form" #reservationForm="ngForm" (ngSubmit)="passReservation()">
+                   <div class="row">
+                      <div class="col-md-12 ">
+                         <input class="contactus" placeholder="Name" type="text" name="a" [(ngModel)]="reservation.name" [ngModelOptions]="{standalone : true}"> 
+                      </div>
+                      <div class="col-md-12 ">
+                        <input class="contactus" placeholder="Email" type="email" name="b" [(ngModel)]="reservation.email" [ngModelOptions]="{standalone : true}"> 
+                     </div>
+                     <div class="col-md-12 ">
+                        <input class="contactus" placeholder="telephone" type="tel" name="x" [(ngModel)]="reservation.telephone" [ngModelOptions]="{standalone : true}"> 
+                     </div>
+                     <div class="col-md-12 ">
+                        <label for="color">our services</label><br>
+                        <input list="services" class="contactus" placeholder="service" type="text" name="e" [(ngModel)]="reservation.service" [ngModelOptions]="{standalone : true}" >
+                     </div>
+                     <div class="col-md-12 ">
+                        <input class="contactus" placeholder="date" type="datetime-local" name="f" [(ngModel)]="reservation.date" [ngModelOptions]="{standalone : true}"> 
+                     </div>
+                     <div class="col-md-12 ">
+                        <input class="contactus" placeholder="message" type="text" name="f" [(ngModel)]="reservation.message" [ngModelOptions]="{standalone : true}">
+
+                     </div>
+                      <div class="col-sm-col-xl-6 col-lg-6 col-md-6 col-sm-12">
+                         <button type="submit" class="send_btn" [value]="title">pass reservation</button>
+                      </div>
+                      <div class="col-sm-col-xl-6 col-lg-6 col-md-6 col-sm-12">
+                         <ul class="social_icon">
+                            <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                            <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                            <li><a href="#"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a></li>
+                            <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                         </ul>
+                      </div>
+                   </div>
+                </form>
+             </div>
+          </div>
+       </div>
+    </div>
+ </footer>
