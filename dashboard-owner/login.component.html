@@ -1,0 +1,37 @@
+<footer id="contact">
+    <div class="footer">
+       <div class="container">
+          <div class="row">
+             <div class="col-md-4">
+                <div class="titlepage">
+                   <h2>LOGIN</h2>
+                </div>
+             </div>
+             <div class="col-md-12">
+                <form id="request" class="main_form" #loginForm="ngForm" (ngSubmit)="login()">
+                   <div class="row">
+                      <div class="col-md-12 ">
+                         <input class="contactus" placeholder="Email" type="email" name="a" [(ngModel)]="user.email" [ngModelOptions]="{standalone : true}"> 
+                      </div>
+                      <div class="col-md-12 ">
+                        <input class="contactus" placeholder="Password" type="password" name="b" [(ngModel)]="user.password" [ngModelOptions]="{standalone : true}"> 
+                     </div>
+                      <div class="col-sm-col-xl-6 col-lg-6 col-md-6 col-sm-12">
+                         <button class="send_btn">login</button>
+                      </div>
+                      <span style="color: red;">{{errMsg}}</span>
+                      <div class="col-sm-col-xl-6 col-lg-6 col-md-6 col-sm-12">
+                         <ul class="social_icon">
+                            <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                            <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                            <li><a href="#"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a></li>
+                            <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                         </ul>
+                      </div>
+                   </div>
+                </form>
+             </div>
+          </div>
+       </div>
+    </div>
+ </footer>

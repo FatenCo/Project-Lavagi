@@ -1,0 +1,36 @@
+<footer id="contact">
+    <div class="footer">
+       <div class="container">
+          <div class="row">
+             <div class="col-md-4">
+                <div class="titlepage">
+                   <h2>ADD SPECIALTY</h2>
+                </div>
+             </div>
+             <div class="col-md-12">
+                <form #specialtyForm="ngForm" (ngSubmit)="addOrEditSpecialty()" id="request" class="main_form">
+                   <div class="row">
+                      <div class="col-md-12">
+                         <input class="contactus" [(ngModel)]="specialty.Name"  [ngModelOptions]="{standalone : true}" placeholder="Name" type="text" name="a"> 
+                      </div>
+                      <div class="col-md-12 ">
+                        <input class="contactus" [(ngModel)]="specialty.Price"  [ngModelOptions]="{standalone : true}" placeholder="Price" type="number" name="b"> 
+                     </div>
+                      <div class="col-sm-col-xl-6 col-lg-6 col-md-6 col-sm-12">
+                        <button type="submit" class="send_btn" [value]="title">add specialty</button>
+                     </div>
+                      <div class="col-sm-col-xl-6 col-lg-6 col-md-6 col-sm-12">
+                         <ul class="social_icon">
+                            <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                            <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                            <li><a href="#"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a></li>
+                            <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                         </ul>
+                      </div>
+                   </div>
+                </form>
+             </div>
+          </div>
+       </div>
+    </div>
+ </footer>
